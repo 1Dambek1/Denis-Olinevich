@@ -77,8 +77,8 @@ const projects = [
     title: "Trading Simulator",
     type: "Web-приложение для онлайн-школы",
     description:
-      "Интерактивный симулятор трейдинга для обучения и практики на рыночных графиках без риска реальных средств.",
-    stack: ["Django", "JavaScript", "Analytics"],
+      "Интерактивный симулятор трейдинга для Онлайн школы для обучения и практики на рыночных графиках без риска реальных средств.",
+    stack: ["Database", "Next.js", "Analytics"],
     href: "https://l1nq.com/muuk8ql",
     image: "/projects/trading.svg",
   },
@@ -135,7 +135,7 @@ function RevealObserver() {
         entries.forEach((entry) => {
           if (entry.isIntersecting) entry.target.classList.add("visible");
         }),
-      { threshold: 0.08 }
+      { threshold: 0.08 },
     );
 
     elements.forEach((element) => observer.observe(element));
@@ -159,10 +159,21 @@ export default function Home() {
         </a>
 
         <nav className={menuOpen ? "nav open" : "nav"}>
-          <a href="#about" onClick={() => setMenuOpen(false)}>Обо мне</a>
-          <a href="#services" onClick={() => setMenuOpen(false)}>Что делаю</a>
-          <a href="#projects" onClick={() => setMenuOpen(false)}>Проекты</a>
-          <a className="nav-contact" href="https://t.me/Dambek0" target="_blank" rel="noreferrer">
+          <a href="#about" onClick={() => setMenuOpen(false)}>
+            Обо мне
+          </a>
+          <a href="#services" onClick={() => setMenuOpen(false)}>
+            Что делаю
+          </a>
+          <a href="#projects" onClick={() => setMenuOpen(false)}>
+            Проекты
+          </a>
+          <a
+            className="nav-contact"
+            href="https://t.me/Dambek0"
+            target="_blank"
+            rel="noreferrer"
+          >
             Написать <ArrowUpRight size={18} />
           </a>
         </nav>
@@ -178,8 +189,14 @@ export default function Home() {
 
       <section className="hero shell" id="top">
         <div className="hero-copy">
-          <div className="hero-label"><i /> Full-stack & AI developer</div>
-          <h1>Денис<br />Олиневич</h1>
+          <div className="hero-label">
+            <i /> Full-stack & AI developer
+          </div>
+          <h1>
+            Денис
+            <br />
+            Олиневич
+          </h1>
           <p>
             Разрабатываю сайты, веб-приложения, AI-решения и ботов для бизнеса —
             от идеи до запуска.
@@ -201,7 +218,9 @@ export default function Home() {
       </section>
 
       <section className="about shell" id="about">
-        <div className="section-label" data-reveal>Обо мне</div>
+        <div className="section-label" data-reveal>
+          Обо мне
+        </div>
         <div className="about-content" data-reveal>
           <h2>
             Собираю готовые цифровые продукты: продумываю архитектуру, пишу
@@ -215,8 +234,14 @@ export default function Home() {
               AI-сервисов и образовательных платформ.
             </p>
             <div className="facts">
-              <div><strong>4+</strong><span>года в разработке</span></div>
-              <div><strong>7</strong><span>готовых проектов</span></div>
+              <div>
+                <strong>4+</strong>
+                <span>года в разработке</span>
+              </div>
+              <div>
+                <strong>7</strong>
+                <span>готовых проектов</span>
+              </div>
             </div>
           </div>
 
@@ -257,7 +282,9 @@ export default function Home() {
             {services.map(({ icon: Icon, ...service }, index) => (
               <article className="service-card" key={service.title} data-reveal>
                 <div className="service-top">
-                  <span><Icon size={21} /></span>
+                  <span>
+                    <Icon size={21} />
+                  </span>
                   <b>0{index + 1}</b>
                 </div>
                 <h3>{service.title}</h3>
@@ -310,7 +337,9 @@ export default function Home() {
                   <p>{project.description}</p>
                 </div>
                 <div className="project-stack">
-                  {project.stack.map((item) => <span key={item}>{item}</span>)}
+                  {project.stack.map((item) => (
+                    <span key={item}>{item}</span>
+                  ))}
                 </div>
               </div>
             </a>
@@ -322,9 +351,7 @@ export default function Home() {
             <span className="section-label">Архив</span>
             <h2>Другие проекты</h2>
           </div>
-          <p>
-            Завершённые собственные и командные разработки.
-          </p>
+          <p>Завершённые собственные и командные разработки.</p>
         </div>
 
         <div className="archive-grid">
@@ -355,7 +382,9 @@ export default function Home() {
                 <h3>{project.title}</h3>
                 <p>{project.description}</p>
                 <div className="archive-stack">
-                  {project.stack.map((item) => <span key={item}>{item}</span>)}
+                  {project.stack.map((item) => (
+                    <span key={item}>{item}</span>
+                  ))}
                 </div>
               </div>
             </a>
@@ -373,19 +402,31 @@ export default function Home() {
           <div className="contact-links">
             <a href="https://t.me/Dambek0" target="_blank" rel="noreferrer">
               <MessageCircle size={20} />
-              <span><small>Telegram</small>@Dambek0</span>
+              <span>
+                <small>Telegram</small>@Dambek0
+              </span>
             </a>
             <a href="mailto:denolinevichd@inbox.ru">
               <Mail size={20} />
-              <span><small>Email</small>denolinevichd@inbox.ru</span>
+              <span>
+                <small>Email</small>denolinevichd@inbox.ru
+              </span>
             </a>
             <a href="tel:+79149232481">
               <Phone size={20} />
-              <span><small>Телефон</small>+7 914 923-24-81</span>
+              <span>
+                <small>Телефон</small>+7 914 923-24-81
+              </span>
             </a>
-            <a href="https://github.com/1Dambek1" target="_blank" rel="noreferrer">
+            <a
+              href="https://github.com/1Dambek1"
+              target="_blank"
+              rel="noreferrer"
+            >
               <Code2 size={20} />
-              <span><small>GitHub</small>1Dambek1</span>
+              <span>
+                <small>GitHub</small>1Dambek1
+              </span>
             </a>
           </div>
         </div>
